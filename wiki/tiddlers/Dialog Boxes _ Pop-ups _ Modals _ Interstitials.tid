@@ -1,0 +1,8 @@
+created: 20241231045423817
+modified: 20241231045631358
+tags: Modals Dialogs Pop-Ups Accessibility
+title: Dialog Boxes / Pop-ups / Modals / Interstitials
+type: text/vnd.tiddlywiki
+
+* Try to avoid planning to use any full-page dialogs/interstitials (unless required by law, such as for confirming a user's age).
+    > If you have to use a full-page dialog, then ensure that the page content is overlaid over it if possible.
