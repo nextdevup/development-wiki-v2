@@ -1,0 +1,20 @@
+created: 20250102051121848
+modified: 20250102051632892
+tags: [[code reviews]] [[pull requests]] reviewer
+title: Pull Request / Code Reviewer
+type: text/vnd.tiddlywiki
+
+* Use positive "I" or "we" statements in your code review comments instead of stuff like "you should."
+> Similarly, it is better to direct comments toward code (e.g. "this could is doing..." vs "you are...").
+* Often, it's best to leave comments in the form of a question instead of command 
+> Such as "what do you think about extracting this into...".
+* Another standard is to follow the OIR pattern (Observation, Impact, and Request).
+* You should strive to understand everything you are approving. If something is unclear, leave a comment asking for clarification 
+> It may also be an opportunity to make the code more descriptive and self-documenting.
+* If there's a fairly technical reason behind your comments' requested change, or suggested solution, you may want to include a reference to an article or something that the coder can reference for more detail.
+* Don't include too many preference related comments to avoid overwhelming the coder (avoid being critical).
+> You should comment on anything that is real issues but only leave a couple comments for areas that may just be learning opportunities.
+> There's typically no need to comment on things like an extra space or blank line (that can always be cleaned up later).
+* Make sure your comment requests aren't introducing scope creep.
+* ''Make sure you also remember to leave praise.''
+* You may also want to follow something like [[Conventional Comments|https://conventionalcomments.org]] but this is probably overkill unless you have some type of automation to take advantage of the various labels.

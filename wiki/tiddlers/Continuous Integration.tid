@@ -1,0 +1,13 @@
+created: 20250102050452864
+modified: 20250102051033938
+tags: [[code reviews]] [[pull requests]]
+title: Continuous Integration
+type: text/vnd.tiddlywiki
+
+* Verify that the Continuous Integration tools are setup and running the following successfully:
+> - Successful builds
+> - Security / Vulnerability Checkers
+> - Unit Tests (front and back-end)
+> - Formatting / Linters
+> - Quality Gates
+> - Merge Conflicts

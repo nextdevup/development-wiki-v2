@@ -1,0 +1,8 @@
+created: 20250102051833510
+modified: 20250102051937548
+tags: Memory Optimization Resources
+title: Resource Management / Optimization
+type: text/vnd.tiddlywiki
+
+Are you properly disposing of resources after use?
+> Such as with a "using" statement in C#.

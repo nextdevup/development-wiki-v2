@@ -1,0 +1,7 @@
+created: 20250102051712842
+modified: 20250102051825525
+tags: React useEffect
+title: React useEffect
+type: text/vnd.tiddlywiki
+
+* Are you properly disposing of resources after use (e.g. the return statement in React useEffects).
