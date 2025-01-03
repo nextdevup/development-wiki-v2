@@ -1,0 +1,8 @@
+created: 20250103052641445
+modified: 20250103052820684
+tags: SEO Redirects
+title: SEO Best Practices
+type: text/vnd.tiddlywiki
+
+* Try to avoid redirecting all pages to a consent/input page before the user can access the site.
+> If necessary to redirect, then make sure you exclude crawlers so that they can still index all page context.

@@ -1,0 +1,11 @@
+created: 20250103050743463
+modified: 20250103051333354
+tags: [[New Projects]]
+title: New Projects
+type: text/vnd.tiddlywiki
+
+* Decide on and follow a plan for organizing files and folders according to a standard folder / directory hierarchy?
+> For example, see [[Feature Folders|https://codingsight.com/asp-net-core-mvc-feature-folders/]].
+* Ensure the new project has documentation:
+> Readme file
+* Ensure that your project is setup well for anyone to be able to pull it down to a fresh laptop and build/run it without issue.

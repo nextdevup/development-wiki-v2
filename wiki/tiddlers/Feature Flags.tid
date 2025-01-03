@@ -1,0 +1,8 @@
+created: 20250103051126224
+modified: 20250103051219786
+tags: [[Feature Flags]] Featbit
+title: Feature Flags
+type: text/vnd.tiddlywiki
+
+* If you are adding feature flags, make sure there is a timeline and plan to remove them.
+> An exception is when they're meant to be long-lasting (such as allowing you disable certain features based on maintenance).

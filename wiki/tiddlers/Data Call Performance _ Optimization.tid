@@ -1,0 +1,8 @@
+created: 20250103050952980
+modified: 20250103051102732
+tags: Performance Optimization APIs [[Data Calls]] Network
+title: Data Call Performance / Optimization
+type: text/vnd.tiddlywiki
+
+* If you added a new network call, make sure to monitor the traffic from your app locally with something like Fiddler to ensure more calls aren't being made then expected.
+> Such as due to connections not being re-used appropriately.

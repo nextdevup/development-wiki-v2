@@ -1,0 +1,20 @@
+created: 20250103052904625
+modified: 20250103054026166
+tags: CSS [[SCSS / SASS]] LESS Performance Optimization
+title: CSS / SCSS / SASS / LESS Implementation
+type: text/vnd.tiddlywiki
+
+* Include section titles in CSS files.
+> You should probably prefix title with something like a hash symbol # to make searching for it easier.
+* Make sure to account for responsiveness across device sizes. 
+* Is your CSS optimized so it only includes what is needed for the current page?
+> For example, Tailwind CSS analyzes usage to determine what to include in the output CSS.
+* Use modern layout options like Flexboxes and Grids which should allow you to avoid older options, like floats.
+* Are your CSS resources versioned to make it easy for cache busting?
+> If you're using a bundler, usually you can just make sure it is configured to handle this.
+* Are you using the display swap option for fonts to avoid them being render blocking?
+* Try to avoid using @import in your CSS files as it will create a sequential CSS request chain (unless it all gets bundled into one file once built).
+> This is because CSS stylesheets are generally render-blocking.
+* Check style guides related to the changes you are making (or verify with linter).
+* Are you pre-caching static CSS files?
+> This differs from prefetching. Pre-caching involves a longer cache lifetime, perhaps the lifetime of the app since these pages aren't dynamic.

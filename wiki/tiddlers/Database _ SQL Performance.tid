@@ -1,0 +1,7 @@
+created: 20250103050428016
+modified: 20250103050514396
+tags: Performance Optimization SQL
+title: Database / SQL Performance
+type: text/vnd.tiddlywiki
+
+While analyzing database calls, you can use commands like EXPLAIN ANALYZE to see how the database server is spending its time during the call.

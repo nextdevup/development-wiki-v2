@@ -1,0 +1,8 @@
+created: 20250103052426911
+modified: 20250103052600293
+tags: .NET DotNet C# CSharp LINQ [[Collections / Lists / Arrays]]
+title: C# / .NET
+type: text/vnd.tiddlywiki
+
+* Use Read-Only, Immutable, or Frozen collections where applicable.
+* Make sure you are avoiding 'Multiple Enumerations' when using lazy enumerations.

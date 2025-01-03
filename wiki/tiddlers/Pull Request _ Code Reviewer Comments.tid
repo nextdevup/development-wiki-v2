@@ -1,7 +1,7 @@
 created: 20250102051121848
-modified: 20250102051632892
-tags: [[code reviews]] [[pull requests]] reviewer
-title: Pull Request / Code Reviewer
+modified: 20250103051411066
+tags: [[code reviews]] [[pull requests]] reviewer comments
+title: Pull Request / Code Reviewer Comments
 type: text/vnd.tiddlywiki
 
 * Use positive "I" or "we" statements in your code review comments instead of stuff like "you should."

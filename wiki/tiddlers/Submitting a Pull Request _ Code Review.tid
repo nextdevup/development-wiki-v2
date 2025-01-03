@@ -1,0 +1,28 @@
+created: 20250103051423063
+modified: 20250103052300205
+tags: [[pull requests]] [[code reviews]] General All
+title: Submitting a Pull Request / Code Review
+type: text/vnd.tiddlywiki
+
+* Make sure that you are remembering to include any subject matter experts (SMEs) on the review.
+* Re-review your own changes first to check for issues before including others on review. 
+* Did you remember to update all related unit/functional tests?
+* Verify code with any automated tools:
+> Build checks
+> Linters
+> Static Code Analyzers
+> CVE / Vulnerability Checkers
+> Quality Gates
+> Unit Tests 
+> Style guides (such as [[Google's Style Guide|https://google.github.io.styleguide/]])
+* Re-check official documentation for all libraries/frameworks/languages being used to verify you are following best practices.
+* Ensure sufficient testing instructions are provided and that you have ran through them.
+* Ensure API keys or any other secrets are not included.
+> See [[Github Secret Scanning|https://docs.github.com/en/code-security/secret-scanning/introduction/about-secret-scanning]]. 
+* Have you checked your performance metrics to ensure that they are what you expect them to be?
+* If you had to do a non-standard or non-intuitive implementation then are you leaving comments to explain why so that someone doesn't change it later?
+* If you are removing/cleaning up something, have you done anything to enforce the principle you're setting?
+> For example, if you only want to allow a specific method for adding cookies, are you adding a custom analyzer or quality gate rule to ensure no other methods are being used (you can also use something like the Microsoft.CodeAnalysis.BannedApiAnalyzers package)?
+> Another example would be if you're trying to replace Newtonsoft.Json references with the built in System.Text.Json library.
+* Did you remember to update all related documentation?
+> This can include much more than just Readme files (think of architecture docs, SLAs, application/network interaction maps, dependency docs, deployment docs, general wikis, manual test plans, metric targets, customer support guidelines, etc.)

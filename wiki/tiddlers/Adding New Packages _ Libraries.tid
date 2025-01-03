@@ -1,0 +1,8 @@
+created: 20250103053540074
+modified: 20250103053731368
+tags: Packages NPM Nuget Yarn Third-Party [[Libraries / Frameworks]]
+title: Adding New Packages / Libraries
+type: text/vnd.tiddlywiki
+
+* Before adding any new libraries, have you confirmed the solution isn't something that you can do relatively easily with framework/library features already installed/available?
+> Or if the library is already in your project, you may want to consider avoiding increasing its usage if you are hopeful of removing it soon.
