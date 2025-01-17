@@ -1,0 +1,7 @@
+created: 20250117232626835
+modified: 20250117232655616
+tags: React
+title: React General
+type: text/vnd.tiddlywiki
+
+* Follow React's ''Data Down, Actions Up'' pattern.

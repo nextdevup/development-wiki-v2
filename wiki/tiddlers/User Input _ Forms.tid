@@ -1,0 +1,12 @@
+created: 20250117231052695
+modified: 20250117231433403
+tags: [[User Input]] Forms Security Validation APIs
+title: User Input / Forms
+type: text/vnd.tiddlywiki
+
+* Verify that the the no-store cache control header is being used for any confidential pages.
+> May also want to check if should be used alongside no-cache or an expires value with max-age=0 to make sure that anything that has been cached is removed.
+* Review Input related sections from the [[OWASP Secure Coding Practices Reference Guide|https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist]].
+* Review the input related sections from the OWASP WSTG ([[Web Security Testing Guide|https://owasp.org/www-project-web-security-testing-guide/latest/]]).
+* Validate User Input Client- and Server-side (including API parameters, headers, etc.)
+> Never rely on only client-side validation. Validate things like length, range, type, etc.

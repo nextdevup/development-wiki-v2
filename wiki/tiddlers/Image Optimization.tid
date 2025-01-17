@@ -1,0 +1,12 @@
+created: 20250117225726355
+modified: 20250117230101058
+tags: Images Photos Media Performance Optimization
+title: Image Optimization
+type: text/vnd.tiddlywiki
+
+* Are images optimized (minimized, best file type, responsively sized images based on screen size)?
+> You may be able to set a server configuration to handle this automatically.
+* Does the image or video thumbnail need to be preloaded or have a fetchpriority?
+> Such as if it is the LCP image.
+* Should image be lazy-loaded?
+* Are you using placeholders or minimum size styling while media loads to avoid layout shifts (CLS)?

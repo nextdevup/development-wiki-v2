@@ -1,0 +1,7 @@
+created: 20250117230135041
+modified: 20250117230205550
+tags: C# Razor
+title: Razor Pages
+type: text/vnd.tiddlywiki
+
+* Turn on the MvcBuildViews setting to have Razor views pre-compiled on build to check for errors.

@@ -1,8 +1,13 @@
 created: 20250103053540074
-modified: 20250103053731368
+modified: 20250117232959596
 tags: Packages NPM Nuget Yarn Third-Party [[Libraries / Frameworks]]
 title: Adding New Packages / Libraries
 type: text/vnd.tiddlywiki
 
 * Before adding any new libraries, have you confirmed the solution isn't something that you can do relatively easily with framework/library features already installed/available?
 > Or if the library is already in your project, you may want to consider avoiding increasing its usage if you are hopeful of removing it soon.
+* Have you reviewed the security of dependencies being installed along with the targeted package?
+> Perhaps with running something like the OpenSSF Security Scorecard tool.
+* If referencing a resource from a CDN or third-party, are you using the Subresource Integrity feature if possible?
+*Did you evaluate the packages license to confirm compatibility?
+> Especially review the rights regarding redistribution and modification. You need to also account if this if you plan to self-host the resource.

@@ -1,0 +1,11 @@
+created: 20250117232307499
+modified: 20250117232434816
+tags: React Memo useCallback
+title: React Memoization
+type: text/vnd.tiddlywiki
+
+* If Memoizing a component, use the useCallback hook for its functions.
+> Otherwise, the component will still always re-render because it sees the function as being different everytime (because Javascript always creates a new function otherwise)
+* Check component that is being memoized to see if any variables will always force a re-render.
+> It'll only take a single value always being new to make memoization pointless -- see [[Should You Add useCallback Everywhere|https://react.dev/reference/react/useCallback#should-you-add-usecallback-everywhere]].
+- If you are using useCallback, make sure you include the dependency array, even if it's empty, to avoid it from returning a new function every time.

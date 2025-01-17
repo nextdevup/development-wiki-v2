@@ -1,0 +1,10 @@
+created: 20250117231827751
+modified: 20250117232040850
+tags: [[Account Pages]] Security
+title: Logged In / Account Pages
+type: text/vnd.tiddlywiki
+
+* Verify that the the no-store cache control header is being used for any confidential pages.
+> May also want to check if should be used alongside no-cache or an expires value with max-age=0 to make sure that anything that has been cached is removed.
+* Review account related sections from the [[OWASP Secure Coding Practices|https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist]] reference guide.
+* Review account related sections from the [[OWASP WSTG|https://owasp.org/www-project-web-security-testing-guide/latest/]] (Web Security Testing Guide).

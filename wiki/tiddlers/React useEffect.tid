@@ -1,7 +1,9 @@
 created: 20250102051712842
-modified: 20250102051825525
+modified: 20250117232305425
 tags: React useEffect
 title: React useEffect
 type: text/vnd.tiddlywiki
 
 * Are you properly disposing of resources after use (e.g. the return statement in React useEffects).
+* Do any useEffect usages have dependencies specified (or empty array for running only initially unless you intentionally want it to run for all component updates).
+* 

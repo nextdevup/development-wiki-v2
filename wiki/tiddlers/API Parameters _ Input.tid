@@ -1,0 +1,10 @@
+created: 20250117231444297
+modified: 20250117231726580
+tags: APIs [[User Input]] Security
+title: API Parameters / Input
+type: text/vnd.tiddlywiki
+
+* Validate User Input Client- and Server-side (including API parameters, headers, etc.)
+> Never rely on only client-side validation. Validate things like length, range, type, etc.
+* Review the input related sections from the [[OWASP Secure Coding Practices|https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/stable-en/02-checklist/05-checklist]] reference guide.
+* Review the input related sections from the [[OWASP WSTG|https://owasp.org/www-project-web-security-testing-guide/latest/]] (Web Security Testing Guide).
