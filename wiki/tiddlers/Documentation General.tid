@@ -1,0 +1,9 @@
+created: 20250214174014415
+modified: 20250214174047400
+tags: Documentation
+title: Documentation General
+type: text/vnd.tiddlywiki
+
+* You should set up your documentation in a versioned way (perhaps in a Git if it's not already part of a specific project's source code):
+> This provides the benefit of being able to review how things have evolved over time and it allows you to go back to see why things may have been a certain way.
+* It can be a good idea for documentation to go through a PR and review process like any other code.

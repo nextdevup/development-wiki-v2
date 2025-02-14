@@ -1,0 +1,7 @@
+created: 20250214171447242
+modified: 20250214171512691
+tags: JavaScript Promises
+title: JavaScript Promises
+type: text/vnd.tiddlywiki
+
+* Avoid floating promises and make sure 'then' callbacks always have a return statement.

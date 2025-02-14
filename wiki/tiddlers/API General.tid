@@ -1,0 +1,25 @@
+created: 20250214172427100
+modified: 20250214173438460
+tags: APIs
+title: API General
+type: text/vnd.tiddlywiki
+
+* Are you following the API REST industry standards?
+> See [[Microsoft Azure REST Guidelines|https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md#representational-state-transfer-rest]].
+* Are you following an API specification, such as OpenAPI (formerly Swagger Specification)?
+> See [[Swagger Docs|https://swagger.io/docs/specification/about/]].
+* Make sure that you setup the API from the beginning to support versioning.
+> For example, you can have the version precede the controller path, such as /v1/{controller} or perhaps use a required query string parameter for the version.
+> Versioning doesn't just applying to breaking changes but also updates that change behavior (such as changing error codes or adding rate limiting).
+> Typically, you'll want to mark the old version as deprecated but you still support it for a specified amount of time (such as 2 years).
+> Ideally, clients will be able to adopt new API versions without requiring additional code changes.
+> New version should be backwards compatible and the client should only need to make code changes to take advantage of new features.
+* Are all your methods idempotent (for allowing repeatable requests)?
+> See something like [[Oasis Open's OData Repeatable Requests v1.0|https://docs.oasis-open.org/odata/repeatable-requests/v1.0/repeatable-requests-v1.0.html]].
+* Does your API return error info in a standardized format to help the client troubleshoot on their end (such as including an error code, message, inner error, etc.)?
+> Typically, top-level error codes are part of the API contract and changing them is considered a breaking changing--that's why it's useful to include inner errors/additional properties since those can typically be updated without worrying about incrementing the version.
+* Is your API using the applicable HTTP method based on the action?
+> POST for adding new items, PATCH for updating existing items, PUT for replacing items, etc.
+* Is your API using the applicable HTTP response codes?
+> 200 for OK, 201 for created, etc. If you don't want to leak the existence of a resource, then you may return 404 instead of 403-Forbidden.
+* Verify you never return anything that should remain hidden. 

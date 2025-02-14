@@ -1,0 +1,14 @@
+created: 20250214170504842
+modified: 20250214171441763
+tags: JavaScript Optimization Performance
+title: JavaScript Performance Tips
+type: text/vnd.tiddlywiki
+
+* Are you adding an await to the export if fetching a resource to avoid blocking other modules?
+* Ensure scripts are set to load at the most opportune time (by using async, defer, etc.)
+> Placing the JavaScript block at the bottom of the page also has basically the same effect as defer.
+* Are you precaching static JavaScript files?
+> This differs from prefetching. Precaching involves a longer cache lifetime, perhaps the lifetime of the app since these pages aren't dynamic.
+* You can address slow-loading blocking scripts by creating a "facade".
+> e.g. show a placeholder for a chat widget and only loading the full widget script if the user tries to interact with it.
+* Is your JavaScript optimized to only include what is necessary for the current page?

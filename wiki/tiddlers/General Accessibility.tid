@@ -1,0 +1,10 @@
+created: 20250214165924367
+modified: 20250214170055399
+tags: Accessibility Focus Aria
+title: General Accessibility
+type: text/vnd.tiddlywiki
+
+* Verify that the focus order of elements is correct.
+* Changing focus should typically only be done based on user's request:
+> Such as them clicking a "Contact Us" button which triggers focus to shift to the contact form at the bottom of a page.
+> For cases where the user is being notified of something, such as an error message, it is typically better to use something like **aria-live="polite"** vs shifting their focus.

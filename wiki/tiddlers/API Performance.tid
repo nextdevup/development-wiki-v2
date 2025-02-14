@@ -1,0 +1,14 @@
+created: 20250214173455758
+modified: 20250214173718174
+tags: APIs Performance Optimization
+title: API Performance
+type: text/vnd.tiddlywiki
+
+* Is your API using default properties or something like GraphQL to prevent returning more properties than necessary in responses?
+* Make sure to setup paging support if there's a chance that the number of items could ever grow very large
+* Your API should typically support standard list operations (such as filter, order by, skip, top, max page size, etc.)
+> Make sure that you perform them in the most efficient order (typically the recommended order is filter -> order by -> skip -> top -> max page size -> select -> expand).
+* Does your API support caching and optimistic concurrency (pre-condition headers)?
+> Honor the If-Match, If-None-Match, If-Modified-Since, and If-Unmodified-Since request headers and the ETag and Last-Modified response headers. See [[Conditional Request Behavior|https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md#conditional-request-behavior]].
+* Are you properly handling long-running operations (longer than 1 second response)?
+> Such as by returning a response indicating processing has started and having an endpoint that can be used by clients to poll when the process has finished (initial endpoint maybe returns the process/operation ID, usually a GUID, which can be used to call the polling endpoint. Also, make sure that validation errors return in the initial response so that client doesn't have to poll first to find out about them. Keep the status monitor record available for a certain amount of time (such as 24 hours).

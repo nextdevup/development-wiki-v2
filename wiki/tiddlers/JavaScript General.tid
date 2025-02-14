@@ -1,0 +1,9 @@
+created: 20250214171653756
+modified: 20250214171727095
+tags: JavaScript
+title: JavaScript General
+type: text/vnd.tiddlywiki
+
+* Are you accounting for variable/function hoisting?
+* If using Javascript Modules, then it's usually best practice to use mjs file extensions instead of js.
+> This helps with clarity and also ensuring parsing tools recognize modules correctly. However, it may require extra server configuration to make sure the files are served with the correct content-type header.

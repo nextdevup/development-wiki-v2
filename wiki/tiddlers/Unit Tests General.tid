@@ -1,0 +1,15 @@
+created: 20250214171816166
+modified: 20250214172328355
+tags: Testing [[Unit Tests]]
+title: Unit Tests General
+type: text/vnd.tiddlywiki
+
+* You should try to get as close to 100% code coverage of tests as possible (without unnecessary testing like adding tests for constructors).
+* Unit tests should be focused on testing a unit of behavior and not a specific method implementation
+> This makes tests more resistant to being affected by refactoring (since as long as the system under test is still behaving like it should then the test should still pass without needing to be changed). Also, this means that a unit test doesn't always have to be limited to a single function. It may be testing a couple different functions as long as they are all part of a single unit of functionality.
+* Make sure your unit tests are completing in milliseconds and not seconds.
+> Otherwise, it will be very hard to include these with automated systems for build/deployment since it can make each run take a long time.
+* Consider if any Dependency Contract Tests are needed.
+> Generally, we don't want to test third-party libraries or other dependencies that aren't part of our project. However, there may be cases where we want to be able to quickly confirm if a dependency still matches with our usage (especially when we are needing to upgrade the version).
+* Make sure that you write failing tests first before you write the code.
+> Or at the very least, make sure you can get the test to fail when expected so that you can trust the passing status. This can help ensure that you're not getting false positives and that the unit test is truly testing what you expect.

@@ -1,0 +1,8 @@
+created: 20250214170342428
+modified: 20250214170445963
+tags: JavaScript Polyfills
+title: Polyfills (General)
+type: text/vnd.tiddlywiki
+
+* Are you adding polyfills where applicable?
+> Ideally, you're only loading polyfills for older browser versions (you shouldn't unnecessary bloat the JS file sizes for newer browsers). 

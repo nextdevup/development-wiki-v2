@@ -1,0 +1,8 @@
+created: 20250214171517704
+modified: 20250214171642047
+tags: JavaScript Performance Cache Optimization
+title: JavaScript and Caching
+type: text/vnd.tiddlywiki
+
+* Are your resources, such as JavaScript, versioned to make it easy for cache busting?
+> If you're using a bundler, usually you can just make sure it is configured to handle this.
