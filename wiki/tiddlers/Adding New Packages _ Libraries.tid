@@ -1,6 +1,6 @@
 created: 20250103053540074
-modified: 20250117232959596
-tags: Packages NPM Nuget Yarn Third-Party [[Libraries / Frameworks]]
+modified: 20250219040140432
+tags: Packages NPM Nuget Yarn Third-Party [[Libraries / Frameworks]] Reliability Network
 title: Adding New Packages / Libraries
 type: text/vnd.tiddlywiki
 
@@ -9,5 +9,11 @@ type: text/vnd.tiddlywiki
 * Have you reviewed the security of dependencies being installed along with the targeted package?
 > Perhaps with running something like the OpenSSF Security Scorecard tool.
 * If referencing a resource from a CDN or third-party, are you using the Subresource Integrity feature if possible?
-*Did you evaluate the packages license to confirm compatibility?
-> Especially review the rights regarding redistribution and modification. You need to also account if this if you plan to self-host the resource.
+* If using a third-party provider, are you making sure that requests to them are going to the most regionally beneficial server/CDN?
+> Close to client's location for front-end libraries but close to your servers for back-end resources.
+* Did you evaluate the packages license to confirm compatibility?
+> Especially review the rights regarding redistribution and modification. You need to also account for this if you plan to self-host the resource. Self-hosting may be an ideal choice if it doesn't break any licensing agreements.
+* Test and account for cases when the third-party service may not be available.
+> If website, then you can experiment with blocking the response in the browser and seeing how well the app responds. Also, test using hosts file to point to a blackhole IP that never responds since app may respond differently while waiting vs a blocked resource.
+* Test and account for cases when the third-party service may be slow to respond.
+> Try testing with throttling the response. You may want to try handling with adding your own timeout fallback logic.

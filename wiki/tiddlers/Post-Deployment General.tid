@@ -1,0 +1,12 @@
+created: 20250219040736584
+modified: 20250219040818598
+tags: Post-Deployment Testing
+title: Post-Deployment General
+type: text/vnd.tiddlywiki
+
+* Verify all of the acceptance testing criteria
+* Monitor logs like the below to ensure things look good:
+> Error logs
+> Metrics
+* Follow the guideline of rolling back first and investigating later when an issue occurs:
+> A hotfix may be warranted if the fix is obvious and small. But typically it's best to avoid rushing out changes (this often introduces new bugs and takes you further away from a known-good state).

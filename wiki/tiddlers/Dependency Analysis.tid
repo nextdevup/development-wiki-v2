@@ -1,0 +1,10 @@
+created: 20250219041137211
+modified: 20250219041302544
+tags: [[New Projects]] Analysis Third-Party
+title: Dependency Analysis
+type: text/vnd.tiddlywiki
+
+* Dig into what references the code areas you're expecting to change to track down all affected dependencies.
+* Determine if feature flags should be used (perhaps with using a tool like FeatBit). You can also consider the Keystone Interface pattern.
+> Feature flags are typically useful if you don't want blocking tasks, like QA approval, to hold up the releases. Code can go into production and then not enabled until tested in all environments and approved.
+* Can you have a workflow added to regularly check installed third-party packages for updates (especially security related ones)?

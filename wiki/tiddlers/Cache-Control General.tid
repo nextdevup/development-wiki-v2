@@ -1,0 +1,15 @@
+created: 20250219035444588
+modified: 20250219040554624
+tags: Cache Cache-Control Network Etags [[Precache / Prefetch]] [[Service Workers]] Reliability
+title: Cache-Control General
+type: text/vnd.tiddlywiki
+
+* In general, regardless of if you want a page cached or not, you should explicitly use the cache control or no-store headers to avoid unexpected results.
+> Use the private cache control header when page has non-confidential data that can be cached in the browser but that wouldn't make sense in a shared cache, like a CDN or Internet Provider cache.
+> May also need to use the "Vary" header if response is dependent on something like a cookie.
+* Use prefetch links or prefetch with service workers for the next page(s) if you have a good idea of where the user will navigate to first (only beneficial if can predict fairly accurately).
+> A good example would be triggering a prefetch for the 'next' page if the user scrolls to the bottom of the current page.
+> Using a worker is really only necessary if you need to cache the page beyond the browser default or if you need to make it available offline.
+* Are you precaching static pages, CSS files, etc.?
+> This differs from prefetching. Precaching involves a longer cache lifetime, perhaps the lifetime of the app since these pages aren't dynamic.
+* Are you using Etags headers where applicable?

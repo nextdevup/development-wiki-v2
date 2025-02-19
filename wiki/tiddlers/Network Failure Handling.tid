@@ -1,0 +1,7 @@
+created: 20250219040908903
+modified: 20250219041010812
+tags: Network Reliability
+title: Network Failure Handling
+type: text/vnd.tiddlywiki
+
+* If a fallback isn't possible, does your app at least provide user instruction in the case of network resource being unavailable?

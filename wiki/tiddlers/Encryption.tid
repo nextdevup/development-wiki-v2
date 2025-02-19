@@ -1,0 +1,7 @@
+created: 20250219040415811
+modified: 20250219040501448
+tags: Encryption Security
+title: Encryption
+type: text/vnd.tiddlywiki
+
+* Make sure only trusted security frameworks/libraries are being used (do not allow the creation of your own methods for hashing, encrypting, etc.)

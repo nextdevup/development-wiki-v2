@@ -1,8 +1,11 @@
 created: 20250103050952980
-modified: 20250103051102732
+modified: 20250219041029682
 tags: Performance Optimization APIs [[Data Calls]] Network
 title: Data Call Performance / Optimization
 type: text/vnd.tiddlywiki
 
 * If you added a new network call, make sure to monitor the traffic from your app locally with something like Fiddler to ensure more calls aren't being made then expected.
 > Such as due to connections not being re-used appropriately.
+* Avoid creating new server connections since there is additional overhead from the handshake process (see connection pooling).
+> The 3-way handshake process means adding a round-trip time 3x.
+* Are there any calls that should be deferred to ensure that the most important requests get bandwidth priority?

@@ -1,0 +1,9 @@
+created: 20250219041322991
+modified: 20250219041422044
+tags: Metrics Logging Optimization Performance Analysis [[New Projects]] [[Error Handling]]
+title: Metrics / Logging General
+type: text/vnd.tiddlywiki
+
+* Determine if any metrics or error logging should be implemented along with your changes.
+* Consider tools like New Relic, Sentry, OpenTelemetry, etc.
+> If this isn't going to be a large app then it may be best to just use text logs for now. Just make sure there is a limit on how large they are allowed to grow or how long we store old ones.
