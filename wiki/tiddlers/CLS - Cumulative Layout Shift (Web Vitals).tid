@@ -1,0 +1,7 @@
+created: 20250224034431040
+modified: 20250224034614787
+tags: CLS [[Web Vitals]]
+title: CLS - Cumulative Layout Shift (Web Vitals)
+type: text/vnd.tiddlywiki
+
+* Animations/Poppers can be used to combat CLS (you can use placeholder space without an animation too of course--but it can make the app more attractive to have loading animations).

@@ -1,7 +1,8 @@
 created: 20250117232626835
-modified: 20250117232655616
+modified: 20250224033132397
 tags: React
 title: React General
 type: text/vnd.tiddlywiki
 
 * Follow React's ''Data Down, Actions Up'' pattern.
+* Are you accidentally invoking a function instead of just passing it as a reference (such as mistakenly adding the parentheses ())

@@ -1,0 +1,7 @@
+created: 20250224032755309
+modified: 20250224033134776
+tags: React Performance Optimization
+title: React General Performance
+type: text/vnd.tiddlywiki
+
+* Try to avoid defining functions directly in components (you can still define them in the same file). This adds more overhead because the function is torn down and re-created with a new reference when the component has to re-render. 

@@ -1,5 +1,5 @@
 created: 20250103050428016
-modified: 20250214170317037
+modified: 20250224034046253
 tags: Performance Optimization SQL [[SQL Triggers]] [[SQL Views]]
 title: Database / SQL Performance
 type: text/vnd.tiddlywiki
@@ -7,3 +7,4 @@ type: text/vnd.tiddlywiki
 * While analyzing database calls, you can use commands like EXPLAIN ANALYZE to see how the database server is spending its time during the call.
 * Avoid nesting views (e.g. don't query a view within another view).
 * If you're using a trigger, be careful of how it can lock resources until it finishes.
+* It seems like it may be recommended to use temp tables instead of table variables in SQL.

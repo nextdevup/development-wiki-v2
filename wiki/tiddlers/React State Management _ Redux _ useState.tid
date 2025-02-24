@@ -1,9 +1,10 @@
 created: 20250117232714321
-modified: 20250117232822056
+modified: 20250224033914767
 tags: [[React State]] Redux React useState
 title: React State Management / Redux / useState
 type: text/vnd.tiddlywiki
 
 * In general, try to avoid over-complicating React code with a state management system, like Redux. Most of the time, you can handle situations with just the built-in useState (or the useReducer for more complex situations)
 > You may need something like Redux when needing to share state between components that aren't part of the same tree (such as if React was mounted from multiple differ locations). You may also need something like Redux if you have some Vanilla JS that needs access to the state.
-- If you're using something like Typescript, it can be good practice to make the variable for useState immutable so that it can only be updated through the set state method.
+* If you're using something like Typescript, it can be good practice to make the variable for useState immutable so that it can only be updated through the set state method.
+* When using something dependent on the re-size observer or window size, be careful how much you have triggering from those events. You probably don't want it triggering state changes or calculations for every single pixel change. At the very least, wrap a state update in an "if" check to make sure it isn't called unless the state truly needs to. 

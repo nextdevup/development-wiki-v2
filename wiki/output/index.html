@@ -174,11 +174,15 @@ Error message and password prompt
 
 <li>CDN</li>
 
+<li>CLS - Cumulative Layout Shift (Web Vitals)</li>
+
 <li>Continuous Integration</li>
 
 <li>Cookies</li>
 
 <li>CSS / SCSS / SASS / LESS Implementation</li>
+
+<li>CSS Animations</li>
 
 <li>Data Call Performance / Optimization</li>
 
@@ -197,6 +201,8 @@ Error message and password prompt
 <li>Feature Flags</li>
 
 <li>General Accessibility</li>
+
+<li>General Analysis</li>
 
 <li>Image Optimization</li>
 
@@ -233,6 +239,8 @@ Error message and password prompt
 <li>Razor Pages</li>
 
 <li>React General</li>
+
+<li>React General Performance</li>
 
 <li>React Memoization</li>
 
@@ -291,15 +299,19 @@ Error message and password prompt
 ,
 {"title":"CDN","created":"20250117231009042","modified":"20250117231047166","tags":"cdn Third-Party","type":"text/vnd.tiddlywiki","text":"* If referencing a resource from a CDN are you using the Subresource Integrity feature if possible?","revision":"0","bag":"default"}
 ,
+{"title":"CLS - Cumulative Layout Shift (Web Vitals)","created":"20250224034431040","modified":"20250224034614787","tags":"CLS [[Web Vitals]]","type":"text/vnd.tiddlywiki","text":"* Animations/Poppers can be used to combat CLS (you can use placeholder space without an animation too of course--but it can make the app more attractive to have loading animations).","revision":"0","bag":"default"}
+,
 {"title":"Continuous Integration","created":"20250102050452864","modified":"20250102051033938","tags":"[[code reviews]] [[pull requests]]","type":"text/vnd.tiddlywiki","text":"* Verify that the Continuous Integration tools are setup and running the following successfully:\n> - Successful builds\n> - Security / Vulnerability Checkers\n> - Unit Tests (front and back-end)\n> - Formatting / Linters\n> - Quality Gates\n> - Merge Conflicts\n","revision":"0","bag":"default"}
 ,
 {"title":"Cookies","created":"20250117232856261","modified":"20250117232930275","tags":"Cookies Legal","type":"text/vnd.tiddlywiki","text":"* If adding new cookies, do any privacy/legal docs need to be updated?\n* Review GDPR related guidelines.","revision":"0","bag":"default"}
 ,
 {"title":"CSS / SCSS / SASS / LESS Implementation","created":"20250103052904625","modified":"20250103054026166","tags":"CSS [[SCSS / SASS]] LESS Performance Optimization","type":"text/vnd.tiddlywiki","text":"* Include section titles in CSS files.\n> You should probably prefix title with something like a hash symbol # to make searching for it easier.\n* Make sure to account for responsiveness across device sizes. \n* Is your CSS optimized so it only includes what is needed for the current page?\n> For example, Tailwind CSS analyzes usage to determine what to include in the output CSS.\n* Use modern layout options like Flexboxes and Grids which should allow you to avoid older options, like floats.\n* Are your CSS resources versioned to make it easy for cache busting?\n> If you're using a bundler, usually you can just make sure it is configured to handle this.\n* Are you using the display swap option for fonts to avoid them being render blocking?\n* Try to avoid using @import in your CSS files as it will create a sequential CSS request chain (unless it all gets bundled into one file once built).\n> This is because CSS stylesheets are generally render-blocking.\n* Check style guides related to the changes you are making (or verify with linter).\n* Are you pre-caching static CSS files?\n> This differs from prefetching. Pre-caching involves a longer cache lifetime, perhaps the lifetime of the app since these pages aren't dynamic.","revision":"0","bag":"default"}
 ,
+{"title":"CSS Animations","created":"20250224034624957","modified":"20250224034725927","tags":"Animations CSS [[SCSS / SASS]]","type":"text/vnd.tiddlywiki","text":"* Make sure animations don't distract from the natural flow of the site (such as adding animations that take away from cart and checkout buttons).","revision":"0","bag":"default"}
+,
 {"title":"Data Call Performance / Optimization","created":"20250103050952980","modified":"20250219041029682","tags":"Performance Optimization APIs [[Data Calls]] Network","type":"text/vnd.tiddlywiki","text":"* If you added a new network call, make sure to monitor the traffic from your app locally with something like Fiddler to ensure more calls aren't being made then expected.\n> Such as due to connections not being re-used appropriately.\n* Avoid creating new server connections since there is additional overhead from the handshake process (see connection pooling).\n> The 3-way handshake process means adding a round-trip time 3x.\n* Are there any calls that should be deferred to ensure that the most important requests get bandwidth priority?","revision":"0","bag":"default"}
 ,
-{"title":"Database / SQL Performance","created":"20250103050428016","modified":"20250214170317037","tags":"Performance Optimization SQL [[SQL Triggers]] [[SQL Views]]","type":"text/vnd.tiddlywiki","text":"* While analyzing database calls, you can use commands like EXPLAIN ANALYZE to see how the database server is spending its time during the call.\n* Avoid nesting views (e.g. don't query a view within another view).\n* If you're using a trigger, be careful of how it can lock resources until it finishes.","revision":"0","bag":"default"}
+{"title":"Database / SQL Performance","created":"20250103050428016","modified":"20250224034046253","tags":"Performance Optimization SQL [[SQL Triggers]] [[SQL Views]]","type":"text/vnd.tiddlywiki","text":"* While analyzing database calls, you can use commands like EXPLAIN ANALYZE to see how the database server is spending its time during the call.\n* Avoid nesting views (e.g. don't query a view within another view).\n* If you're using a trigger, be careful of how it can lock resources until it finishes.\n* It seems like it may be recommended to use temp tables instead of table variables in SQL.","revision":"0","bag":"default"}
 ,
 {"title":"Dependency Analysis","created":"20250219041137211","modified":"20250219041302544","tags":"[[New Projects]] Analysis Third-Party","type":"text/vnd.tiddlywiki","text":"* Dig into what references the code areas you're expecting to change to track down all affected dependencies.\n* Determine if feature flags should be used (perhaps with using a tool like FeatBit). You can also consider the Keystone Interface pattern.\n> Feature flags are typically useful if you don't want blocking tasks, like QA approval, to hold up the releases. Code can go into production and then not enabled until tested in all environments and approved.\n* Can you have a workflow added to regularly check installed third-party packages for updates (especially security related ones)?","revision":"0","bag":"default"}
 ,
@@ -314,6 +326,8 @@ Error message and password prompt
 {"title":"Feature Flags","created":"20250103051126224","modified":"20250103051219786","tags":"[[Feature Flags]] Featbit","type":"text/vnd.tiddlywiki","text":"* If you are adding feature flags, make sure there is a timeline and plan to remove them.\n> An exception is when they're meant to be long-lasting (such as allowing you disable certain features based on maintenance).","revision":"0","bag":"default"}
 ,
 {"title":"General Accessibility","created":"20250214165924367","modified":"20250219040332606","tags":"Accessibility Focus Aria","type":"text/vnd.tiddlywiki","text":"* Verify that the focus order of elements is correct.\n* Changing focus should typically only be done based on user's request:\n> Such as them clicking a \"Contact Us\" button which triggers focus to shift to the contact form at the bottom of a page.\n> For cases where the user is being notified of something, such as an error message, it is typically better to use something like **aria-live=\"polite\"** vs shifting their focus.\n* Use tools like Lighthouse, WAVE, etc. to verify accessibility rules are being followed.\n* Use a screen reader to verify the areas being changed are properly formatted for these tools.","revision":"0","bag":"default"}
+,
+{"title":"General Analysis","created":"20250224033147657","modified":"20250224033712762","tags":"Analysis","type":"text/vnd.tiddlywiki","text":"* Does the request offer the best solution to the problem trying to be solved?\n* How costly would it be to apply our current technology/frameworks vs a new one to solve the problem? Have we also factored in the impact to other teams in the cost? \n* Would the new technology/library be easy to learn? Does it have good documentation and support? Is it flexible? Does it have good security? Does it have a large and active user base?\n* Does the new technology/framework positively impact the performance, stability, cost or reliability of our application infrastructure?","revision":"0","bag":"default"}
 ,
 {"title":"Image Optimization","created":"20250117225726355","modified":"20250117230101058","tags":"Images Photos Media Performance Optimization","type":"text/vnd.tiddlywiki","text":"* Are images optimized (minimized, best file type, responsively sized images based on screen size)?\n> You may be able to set a server configuration to handle this automatically.\n* Does the image or video thumbnail need to be preloaded or have a fetchpriority?\n> Such as if it is the LCP image.\n* Should image be lazy-loaded?\n* Are you using placeholders or minimum size styling while media loads to avoid layout shifts (CLS)?","revision":"0","bag":"default"}
 ,
@@ -349,11 +363,13 @@ Error message and password prompt
 ,
 {"title":"Razor Pages","created":"20250117230135041","modified":"20250117230205550","tags":"C# Razor","type":"text/vnd.tiddlywiki","text":"* Turn on the MvcBuildViews setting to have Razor views pre-compiled on build to check for errors.","revision":"0","bag":"default"}
 ,
-{"title":"React General","created":"20250117232626835","modified":"20250117232655616","tags":"React","type":"text/vnd.tiddlywiki","text":"* Follow React's ''Data Down, Actions Up'' pattern.","revision":"0","bag":"default"}
+{"title":"React General","created":"20250117232626835","modified":"20250224033132397","tags":"React","type":"text/vnd.tiddlywiki","text":"* Follow React's ''Data Down, Actions Up'' pattern.\n* Are you accidentally invoking a function instead of just passing it as a reference (such as mistakenly adding the parentheses ())","revision":"0","bag":"default"}
+,
+{"title":"React General Performance","created":"20250224032755309","modified":"20250224033134776","tags":"React Performance Optimization","type":"text/vnd.tiddlywiki","text":"* Try to avoid defining functions directly in components (you can still define them in the same file). This adds more overhead because the function is torn down and re-created with a new reference when the component has to re-render. ","revision":"0","bag":"default"}
 ,
 {"title":"React Memoization","created":"20250117232307499","modified":"20250117232434816","tags":"React Memo useCallback","type":"text/vnd.tiddlywiki","text":"* If Memoizing a component, use the useCallback hook for its functions.\n> Otherwise, the component will still always re-render because it sees the function as being different everytime (because Javascript always creates a new function otherwise)\n* Check component that is being memoized to see if any variables will always force a re-render.\n> It'll only take a single value always being new to make memoization pointless -- see [[Should You Add useCallback Everywhere|https://react.dev/reference/react/useCallback#should-you-add-usecallback-everywhere]].\n- If you are using useCallback, make sure you include the dependency array, even if it's empty, to avoid it from returning a new function every time.","revision":"0","bag":"default"}
 ,
-{"title":"React State Management / Redux / useState","created":"20250117232714321","modified":"20250117232822056","tags":"[[React State]] Redux React useState","type":"text/vnd.tiddlywiki","text":"* In general, try to avoid over-complicating React code with a state management system, like Redux. Most of the time, you can handle situations with just the built-in useState (or the useReducer for more complex situations)\n> You may need something like Redux when needing to share state between components that aren't part of the same tree (such as if React was mounted from multiple differ locations). You may also need something like Redux if you have some Vanilla JS that needs access to the state.\n- If you're using something like Typescript, it can be good practice to make the variable for useState immutable so that it can only be updated through the set state method.","revision":"0","bag":"default"}
+{"title":"React State Management / Redux / useState","created":"20250117232714321","modified":"20250224033914767","tags":"[[React State]] Redux React useState","type":"text/vnd.tiddlywiki","text":"* In general, try to avoid over-complicating React code with a state management system, like Redux. Most of the time, you can handle situations with just the built-in useState (or the useReducer for more complex situations)\n> You may need something like Redux when needing to share state between components that aren't part of the same tree (such as if React was mounted from multiple differ locations). You may also need something like Redux if you have some Vanilla JS that needs access to the state.\n* If you're using something like Typescript, it can be good practice to make the variable for useState immutable so that it can only be updated through the set state method.\n* When using something dependent on the re-size observer or window size, be careful how much you have triggering from those events. You probably don't want it triggering state changes or calculations for every single pixel change. At the very least, wrap a state update in an \"if\" check to make sure it isn't called unless the state truly needs to. ","revision":"0","bag":"default"}
 ,
 {"title":"React useEffect","created":"20250102051712842","modified":"20250117232305425","tags":"React useEffect","type":"text/vnd.tiddlywiki","text":"* Are you properly disposing of resources after use (e.g. the return statement in React useEffects).\n* Do any useEffect usages have dependencies specified (or empty array for running only initially unless you intentionally want it to run for all component updates).\n* ","revision":"0","bag":"default"}
 ,
