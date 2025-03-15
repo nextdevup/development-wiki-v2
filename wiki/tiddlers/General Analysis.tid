@@ -1,10 +1,17 @@
 created: 20250224033147657
-modified: 20250224033712762
+modified: 20250315004528497
 tags: Analysis
 title: General Analysis
 type: text/vnd.tiddlywiki
 
+* Create a mock-up if necessary.
 * Does the request offer the best solution to the problem trying to be solved?
+* Make sure that you are involving any subject matter experts (SMEs).
+> Generally, the more communication to more people the better. Want to identify duplicated efforts, potential issues that you may not be aware of, better solutions, etc.
 * How costly would it be to apply our current technology/frameworks vs a new one to solve the problem? Have we also factored in the impact to other teams in the cost? 
+* Are you sure the feature isn't something that can be handled by native browser APIs, the .NET framework, etc.
+* You have to also consider the overhead and size of dependencies of dependencies (you can check with something like [[Bundlephobia|https://bundlephobia.com/]]). 
 * Would the new technology/library be easy to learn? Does it have good documentation and support? Is it flexible? Does it have good security? Does it have a large and active user base?
 * Does the new technology/framework positively impact the performance, stability, cost or reliability of our application infrastructure?
+* Check for vulnerabilities tied to the package (you can use the [[GitHub Advisory Database|https://github.com/advisories]]).
+* Is there a security standard that you need to follow along with your changes (such as OAuth 2.0 for APIs)?
