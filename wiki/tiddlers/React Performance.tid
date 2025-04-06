@@ -1,9 +1,10 @@
 created: 20250224032755309
-modified: 20250315002851031
+modified: 20250406182340171
 tags: React Performance Optimization
-title: React General Performance
+title: React Performance
 type: text/vnd.tiddlywiki
 
+* Avoid calling a function to get a component vs using component syntax because calling the function can cause more re-renders than necessary (always use <TestComponent /> vs invoking something like TestComponent()).
 * Try to avoid defining functions directly in components (you can still define them in the same file). This adds more overhead because the function is torn down and re-created with a new reference when the component has to re-render. 
 
 [img[https://kamranayub.com/content/images/2023/12/React-Audit-Cheat-Sheet.jpg]]

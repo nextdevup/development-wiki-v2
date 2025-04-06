@@ -1,0 +1,7 @@
+created: 20250406182559912
+modified: 20250406182629984
+tags: SQL
+title: SQL General
+type: text/vnd.tiddlywiki
+
+* Take advantage of TRY_CAST, TRY_CONVERT, and TRY_PARSE.

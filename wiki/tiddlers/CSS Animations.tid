@@ -1,7 +1,11 @@
 created: 20250224034624957
-modified: 20250224034725927
+modified: 20250406182131945
 tags: Animations CSS [[SCSS / SASS]]
 title: CSS Animations
 type: text/vnd.tiddlywiki
 
+* Make sure to use an Accessibility testing library like WAVE.
+* Avoid having anything flash more than 3x/second as it could trigger a seizure.
 * Make sure animations don't distract from the natural flow of the site (such as adding animations that take away from cart and checkout buttons).
+* Users should not have to depend on animations for any site functionality (for accessibility reasons). 
+* Take advantage of and respect the media query prefers-reduced-motion. 

@@ -1,0 +1,38 @@
+created: 20250406180458237
+modified: 20250406181205047
+tags: Architecture Analysis DevOps [[New Projects]] SQL
+title: Architecture Analysis
+type: text/vnd.tiddlywiki
+
+* Ensure an ADR (Architectural Design Record) is created explaining all the options considered and why a certain route was decided on.
+* Determine Git branching strategy (OneFlow, GitFlow, Trunk-based Flow, etc.)
+* Decide on Vertical Slicing or Horizontal Slicing.
+
+* Determine if you want to go with a Microservices or Monolith architecture:
+
+''Monolith''
+
+* Use if planning a system that is not expected to be very complex.
+* Although not universally accepted, many recommend always doing a Monolith-first approach
+> The reasoning is that it's hard to know the proper domain boundaries to apply before you have the application in place. And then once you do, you can iteratively work on separating out pieces into microservices.
+> If you go this route though, you should place an emphasis on modularity (within code and how data is stored) which will make it easy to break into microservices.
+
+''Microservices''
+
+__Pre-requisites__
+
+* Not even worth considering if your project may never be that complex (since it adds a lot of overhead and complexity to reap benefits).
+* You must be able to clearly define domain and service boundaries.
+* You should have a lot of automation available to use, especially for deployments, in order to work with a lot services (since the rollout process will typically be more complex then with monoliths).
+* You need to plan for how to prevent latency from building up due to all the additional service calls.
+* You also should plan for quality monitoring to be in place since the dependencies are spread out.
+* You obviously need to be more prepared for service calls to fail and how to handle them gracefully.
+*One benefit is microservices allow for the use of diverse technologies since they are independent.
+* Microservices also make it easier to upgrade dependencies/packages since less code impacted with each upgrade compared to monolith app.
+* Easier to deploy changes since each service can often be deployed independently.
+
+''Database Architecture''
+
+* Look into pros/cons of using Integration/Shared Databases vs Decentralized Data Management.
+> With Decentralized Data Management, each service manages its own database. For anything else to access that data, it has to go through the owning service/API (other services cannot access the database directly).
+* Will you want to use any NoSQL type systems (such as ElasticSearch).

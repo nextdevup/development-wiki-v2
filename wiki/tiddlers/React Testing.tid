@@ -1,0 +1,12 @@
+created: 20250406181601312
+modified: 20250406181924392
+tags: React Testing [[Unit Tests]] [[React Testing Library]]
+title: React Testing
+type: text/vnd.tiddlywiki
+
+''React Testing Library''
+
+* Read through docs for any features you are using (lots of gotchas).
+* UserEvents are suggested over FireEvents because UserEvents better mimics the behavior of an actual user.
+* Similarly, toBeVisible is suggested over toBeInDocument because it better tests what the user can actually see.
+* Also, should use something like toBeEnabled when checking if a button is available (vs just checking if button is found).

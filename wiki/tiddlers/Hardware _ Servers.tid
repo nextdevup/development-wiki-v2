@@ -1,0 +1,7 @@
+created: 20250406180345382
+modified: 20250406180430475
+tags: Hardware Servers Configuration Analysis
+title: Hardware / Servers
+type: text/vnd.tiddlywiki
+
+* Have you planned for a sufficient number of warm servers to always be available to ensure the avoidance of cold starts on responses?
