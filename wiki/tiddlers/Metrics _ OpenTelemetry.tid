@@ -1,0 +1,24 @@
+created: 20250501022505418
+modified: 20250501031105603
+tags: Metrics OpenTelemetry Performance Optimization
+title: Metrics / OpenTelemetry
+type: text/vnd.tiddlywiki
+
+''General''
+
+* Always use null checks because there are cases where .NET will determine that it is pointless to create a Meter or Activity in the current environment and will return null instead (this often occurs with unit tests).
+* Verify your metric and activity names (OpenTelemetry will not collect metrics from instruments that are using invalid names).
+
+''Activities / Spans''
+
+* It can be more performant to use Events within an Activity when you want to log when certain things happen (such as steps taken by a method) vs using a child activity.
+
+''Custom Metrics''
+
+* If your application uses Dependency Injection, then you should take advantage of the IMeterFactory (automatically registered as a Singleton by .NET >= 8). The IMeterFactory caches a dictionary of meters by name (see [[DefaultMeterFactory|https://github.com/dotnet/runtime/blob/main/src/libraries/Microsoft.Extensions.Diagnostics/src/Metrics/DefaultMeterFactory.cs]]). Otherwise, you should use a static variable for the Meter.
+* You also don't need to use a "using" block or dispose of meters created with IMeterFactory. IMeterFactory will handle the lifetime and disposing of the Meters.
+* You should limit how much extra data you include in metrics because it can exponentially increase how much data is being ingested (space is allocated for every possible combination of tags/attributes so it will grow very quickly). If you want to include a lot of extra data, then using an Activity/Span may be better.
+* Although it usually doesn't matter unless working with a very hot path, it can be more performant to use the Observable version of a metric (but take note of the tips regarding synchronization issues with Observable metrics).
+* Careful using histograms unless absolutely necessary because they are the most resource intensive type of metric. Counters are in the middle. Gauges are the most lightweight. See [[Guide on Picking the Right Metric Type|https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/metrics/supplementary-guidelines.md#instrument-selection]].
+* See [[Creating Metrics|https://learn.microsoft.com/en-us/dotnet/core/diagnostics/metrics-instrumentation]] for all the Best Practices sections.
+* See the [[OpenTelemetry Metrics ReadMe|https://github.com/open-telemetry/opentelemetry-dotnet/blob/main/docs/metrics/README.md]].

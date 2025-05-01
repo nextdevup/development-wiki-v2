@@ -1,7 +1,7 @@
 created: 20250219041322991
-modified: 20250219041422044
-tags: Metrics Logging Optimization Performance Analysis [[New Projects]] [[Error Handling]]
-title: Metrics / Logging General
+modified: 20250501022503119
+tags: Logging Optimization Performance Analysis [[New Projects]] [[Error Handling]]
+title: Logging General
 type: text/vnd.tiddlywiki
 
 * Determine if any metrics or error logging should be implemented along with your changes.
