@@ -1,5 +1,5 @@
 created: 20250103050743463
-modified: 20250103051333354
+modified: 20250519152934915
 tags: [[New Projects]]
 title: New Projects
 type: text/vnd.tiddlywiki
@@ -9,3 +9,7 @@ type: text/vnd.tiddlywiki
 * Ensure the new project has documentation:
 > Readme file
 * Ensure that your project is setup well for anyone to be able to pull it down to a fresh laptop and build/run it without issue.
+* Evaluate if the CQRS pattern should be used (separate models/databases for writes vs queries -- for example, a SQL database for writes and ElasticSearch for queries).
+> Generally, only recommended for projects that will become quite large and that need to be able to scale to huge amounts of traffic (there is a lot of added complexity and overhead for CQRS--such as the difficulty with ensuring data integrity with syncing writes/updates to the read database).
+> It does allow for being able to add additional validation and security logic on write models without affecting queries (since query vs write operation logic is handled separately).
+> Having separate query vs write databases also makes scaling easier since you can focus on where the most load is occurring.

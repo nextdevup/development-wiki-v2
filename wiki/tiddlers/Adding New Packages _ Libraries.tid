@@ -1,5 +1,5 @@
 created: 20250103053540074
-modified: 20250219040140432
+modified: 20250519152211473
 tags: Packages NPM Nuget Yarn Third-Party [[Libraries / Frameworks]] Reliability Network
 title: Adding New Packages / Libraries
 type: text/vnd.tiddlywiki
@@ -17,3 +17,5 @@ type: text/vnd.tiddlywiki
 > If website, then you can experiment with blocking the response in the browser and seeing how well the app responds. Also, test using hosts file to point to a blackhole IP that never responds since app may respond differently while waiting vs a blocked resource.
 * Test and account for cases when the third-party service may be slow to respond.
 > Try testing with throttling the response. You may want to try handling with adding your own timeout fallback logic.
+* The responsible developer should socialize the experiment and results to the broader engineering organization in case it applies to problems other teams face.
+* When adopting a new feature/package, try to start with using them in less critical areas initially before adopting further.

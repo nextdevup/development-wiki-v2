@@ -1,0 +1,7 @@
+created: 20250519152243470
+modified: 20250519152437606
+tags: [[New Projects]] [[Feature Flags]] Analysis
+title: Adding New Features (no new package / library)
+type: text/vnd.tiddlywiki
+
+* Evaluate the benefit of using Feature Flags, Dark Launching, or Canary Releasing (phased rollout / incremental rollout).

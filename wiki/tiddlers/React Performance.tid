@@ -1,5 +1,5 @@
 created: 20250224032755309
-modified: 20250406182340171
+modified: 20250519151323078
 tags: React Performance Optimization
 title: React Performance
 type: text/vnd.tiddlywiki
@@ -8,3 +8,8 @@ type: text/vnd.tiddlywiki
 * Try to avoid defining functions directly in components (you can still define them in the same file). This adds more overhead because the function is torn down and re-created with a new reference when the component has to re-render. 
 
 [img[https://kamranayub.com/content/images/2023/12/React-Audit-Cheat-Sheet.jpg]]
+
+* You should never define a functional component within another component. Even if you want to put multiple components in the same file, you should define them all at the top level.
+> Defining a component within another component can cause bugs and performance issues. This can be especially apparent if the nested component has its own state because you will see it get re-mounted with a fresh state anytime the parent re-renders (it's given a brand new reference which is why the state doesn't persist).
+* Typically, functions should be defined at the top level and not within a functional component's definition. Anything that is not memoized in a component is re-created on each render so extra processing time is used re-creating the functions on each re-render. 
+* Additionally, arguments should be passed into functions. If you have to define a function within a component definition and have it referencing component props directly, then it can unnecessarily re-create more than needed (this is already avoided if you're not defining functions in a component definition).

@@ -1,5 +1,5 @@
 created: 20250224034624957
-modified: 20250406182131945
+modified: 20250519152106122
 tags: Animations CSS [[SCSS / SASS]]
 title: CSS Animations
 type: text/vnd.tiddlywiki
@@ -9,3 +9,7 @@ type: text/vnd.tiddlywiki
 * Make sure animations don't distract from the natural flow of the site (such as adding animations that take away from cart and checkout buttons).
 * Users should not have to depend on animations for any site functionality (for accessibility reasons). 
 * Take advantage of and respect the media query prefers-reduced-motion. 
+* For long-running animations (5+ seconds), give the user the option to pause, stop, or hide the animation (especially if it moves, flashes, or scrolls).
+> You should perhaps have a site-wide setting that allows users to disable animations since people can be sensitive to motion. 
+> For example, you may want to respect the [[prefers-reduced-motion media query|https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility]].
+* Always weight the ROI of animations since there is a performance cost.
