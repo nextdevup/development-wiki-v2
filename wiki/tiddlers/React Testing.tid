@@ -1,5 +1,5 @@
 created: 20250406181601312
-modified: 20250406181924392
+modified: 20250905194830877
 tags: React Testing [[Unit Tests]] [[React Testing Library]]
 title: React Testing
 type: text/vnd.tiddlywiki
@@ -7,6 +7,13 @@ type: text/vnd.tiddlywiki
 ''React Testing Library''
 
 * Read through docs for any features you are using (lots of gotchas).
-* UserEvents are suggested over FireEvents because UserEvents better mimics the behavior of an actual user.
-* Similarly, toBeVisible is suggested over toBeInDocument because it better tests what the user can actually see.
-* Also, should use something like toBeEnabled when checking if a button is available (vs just checking if button is found).
+* Testing should simulate real user interactions as much as possible. For example, these are some guidelines for React Testing Library:
+** UserEvents are suggested over FireEvents because UserEvents better mimics the behavior of an actual user.
+** Similarly, toBeVisible is suggested over toBeInDocument because it better tests what the user can actually see.
+** Also, should use something like toBeEnabled when checking if a button is available (vs just checking if button is found).
+** Follow the guidelines for getting elements with the query type most like a user (such as getting by role vs getting by test ID). See [[Query Priorities|https://testing-library.com/docs/queries/about/#priority]].
+* For React Testing Library, use getBy... when looking for element expected to be present in document. Use queryBy... when checking for an element that shouldn't be present. And use findBy... when dealing with asynchronous operations and needing to wait for an element to appear.
+* In React Testing Library, avoid having multiple assertions in a waitFor (which can cause unnecessary waiting -- see [[Kent Dodd's note here |https://kentcdodds.com/blog/common-mistakes-with-react-testing-library#having-multiple-assertions-in-a-single-waitfor-callback]]for the reason why).
+** Similarly, don't put side-effects, such as UserEvents, in the waitFor. The waitFor can be called a number of times while waiting for its assertion to pass which means it also would be calling any events you have inside of it a number of times.
+* It can be good to not just test a function is called when expected but also that it has been called the expected amount of times and with the expected data.
+* A lot of the testing libraries, like React Testing Library and Jest have their own ESLint plugins that you should install to make sure you are following best practices.
