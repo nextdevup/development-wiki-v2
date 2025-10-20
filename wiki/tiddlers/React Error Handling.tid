@@ -1,0 +1,7 @@
+created: 20251020024528397
+modified: 20251020024901335
+tags: React [[Error Handling]]
+title: React Error Handling
+type: text/vnd.tiddlywiki
+
+* Include ErrorBoundary components where appropriate (but keep in mind they aren't typically meant for catching certain errors, such as those thrown by event handlers).

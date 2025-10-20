@@ -1,5 +1,5 @@
 created: 20250224032755309
-modified: 20250519151323078
+modified: 20251020030242196
 tags: React Performance Optimization
 title: React Performance
 type: text/vnd.tiddlywiki
@@ -13,3 +13,6 @@ type: text/vnd.tiddlywiki
 > Defining a component within another component can cause bugs and performance issues. This can be especially apparent if the nested component has its own state because you will see it get re-mounted with a fresh state anytime the parent re-renders (it's given a brand new reference which is why the state doesn't persist).
 * Typically, functions should be defined at the top level and not within a functional component's definition. Anything that is not memoized in a component is re-created on each render so extra processing time is used re-creating the functions on each re-render. 
 * Additionally, arguments should be passed into functions. If you have to define a function within a component definition and have it referencing component props directly, then it can unnecessarily re-create more than needed (this is already avoided if you're not defining functions in a component definition).
+* Try to avoid prop spreading. It can hide changes or cause unnecessary re-renders due to one of the props values changing even though that property isn't technically used by the component.
+* Try to avoid creating new objects directly within the props being passed into a component as that can break referential equality. For example, avoid this:
+```<Component test={{ value: "test" }} />```

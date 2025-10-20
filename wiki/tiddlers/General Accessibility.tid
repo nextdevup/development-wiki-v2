@@ -1,9 +1,10 @@
 created: 20250214165924367
-modified: 20250219040332606
+modified: 20251020043421690
 tags: Accessibility Focus Aria
 title: General Accessibility
 type: text/vnd.tiddlywiki
 
+* It's typically better to use tools for validation vs trying to remember all the rules.
 * Verify that the focus order of elements is correct.
 * Changing focus should typically only be done based on user's request:
 > Such as them clicking a "Contact Us" button which triggers focus to shift to the contact form at the bottom of a page.

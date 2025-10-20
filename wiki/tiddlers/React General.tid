@@ -1,8 +1,9 @@
 created: 20250117232626835
-modified: 20250224033132397
+modified: 20251020025039923
 tags: React
 title: React General
 type: text/vnd.tiddlywiki
 
+* In general, make sure you are using a linter as there's too many standards to always remember.
 * Follow React's ''Data Down, Actions Up'' pattern.
-* Are you accidentally invoking a function instead of just passing it as a reference (such as mistakenly adding the parentheses ())
+* Are you accidentally invoking a function instead of just passing it as a reference (such as mistakenly adding the parentheses ()).
